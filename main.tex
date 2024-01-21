@@ -113,7 +113,7 @@
 \begin{frame}{Object-Oriented Paradigm}
   \begin{columns}[c] 
     \column{.42\textwidth}
-    \begin{varblock}[9cm]{}
+    \begin{varblock}[9.5cm]{}
         \begin{itemize}
         \item OOP is one of the most widely used programming paradigm.
         \item Promotes efficient design with reusable components.
@@ -564,36 +564,37 @@
   \vfill
 \end{frame}
 
-\begin{frame}{Field Profit Analysis}
+\begin{frame}{Execution Engine}
   \begin{figure}
-    \begin{block}{}
+    \begin{block}{Field Profit Analysis}
       \begin{itemize}
         \item Runtime profiler output provides a measure of cost and benefits associated with inlining a field.
         \item Perform cost-benefit analysis for each field.
         \item Selectively identify fields which benefit from inlining.
-        \item Maximum threshold size of \textbf{Container} = 2 x Cache Line Size is verified at runtime.
-        \item If the container size of \textbf{Container} exceeds the threshold,
+        \item Maximum threshold size of \textbf{Container} = \textbf{2 x Cache Line Size} is verified at runtime.
+        \item If the container size of {\tt Container} exceeds the threshold,
               inline fields based on FCFS approach.
       \end{itemize}
     \end{block}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Selective Inlining}
+\begin{frame}{Execution Engine}
   \begin{figure}
-    \begin{block}{}
+    \begin{block}{Selective Inlining}
       \begin{columns}[c] 
-        \column{.42\textwidth} % Left column and width
+        \column{.45\textwidth} % Left column and width
          \begin{figure}[noindent]
     \lstinputlisting[style=code]{code/Container_X.java}
     \end{figure}
-        \column{.57\textwidth} % Right column and width
+        \column{.52\textwidth} % Right column and width
+        \small
         \begin{itemize}
           \item Inline fields selectively rather than inlining fields of the same type across containers.
           \item {\tt iField1} can be inlined irrespective of {\tt iField2} in {\tt Container1} instance.
           \item {\tt iField3} in {\tt Container2} instance can be inlined irrespective of  or {\tt iField2} in {\tt Container1} instance.
         \end{itemize}
-        \phantom{Text}
+        % \phantom{Text}
     \end{columns}
     \vfill
     \end{block}
@@ -657,6 +658,16 @@
     \phantom{\citep{spa} \citep{EAA99} \citep{CPAEA99} \citep{soot} \citep{GPO} \citep{PV}
     \citep{PYE2019} \citep{JEPP} \citep{JEPD} \citep{OpenJ9} \citep{JP}
     }
+\end{frame}
+
+\begin{frame}{Publications}
+  \begin{enumerate}
+    \item \textbf{Arjun Harikumar} and \textbf{Manas Thakur}. “ValFinder: Finding Hidden Value-Type Classes”. 
+    6th Workshop on Advances in Open Runtimes and Cloud Performance Technologies (AORCPT), part of IBM WeaveSphere, Toronto, Canada, November 16th, 2022.
+    \item \textbf{Arjun H Kumar}, Hang Shao, Tobi Ajila, Vijay Sundaresan, Daryl Maier, and \textbf{Manas Thakur}.
+    "Selective Value-Object Inlining using Hybrid Static and Dynamic Analysis". 
+    (under review in the European Conference on Object-Oriented Programming (ECOOP), 2024)   
+  \end{enumerate} 
 \end{frame}
 
 \begin{frame}
