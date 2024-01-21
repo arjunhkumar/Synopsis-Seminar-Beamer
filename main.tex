@@ -398,9 +398,27 @@
 
 %------------------------- 14. ANTI-PATTERNS-2 SLIDE -----------------------%
 \begin{frame}{Anti-Patterns: Inlined-Field Load}
+  % \footnotesize
+  \begin{itemize}
+  \item Microbenchmark designed to compute the potential benefits of inlined field access inside containers.
+  \end{itemize}
   \begin{columns}[c] 
-  \column{.45\textwidth} 
-  \footnotesize
+  \column{.48\textwidth}
+    \begin{figure}[noindent]
+      \begin{flushleft}
+      \lstinputlisting[style=code,numbers=none]{code/EA.java}
+      \end{flushleft}
+    \end{figure}
+  \column{.51\textwidth}
+  % \nobreakspace
+  \begin{figure}
+        \includegraphics[width=0.4\linewidth]{images/usecase2.pdf}
+  \end{figure}
+\end{columns}
+\end{frame}
+%------------------------- 14. ANTI-PATTERNS-3 SLIDE -----------------------%
+\begin{frame}{Anti-Patterns: Inlined-Field Load}
+  \centering
   \begin{algorithm}[H]
     \Fn {getField($F_{n}$ : Field)} {
       \textit{Object} $O_{c}$ = \textit{getContainerObject($f_{n}$)}\;
@@ -418,18 +436,9 @@
       }
   }
   \end{algorithm}
-  \column{.54\textwidth}
-  \footnotesize
-  \begin{itemize}
-  \item Microbenchmark designed to compute the potential benefits of inlined field access inside containers.
-  \end{itemize}
-  % \nobreakspace
-  \begin{figure}
-        \includegraphics[width=0.4\linewidth]{images/usecase2.pdf}
-  \end{figure}
-\end{columns}
 \end{frame}
-%------------------------- 14. ANTI-PATTERNS-2 SLIDE -----------------------%
+%------------------------- 14. ANTI-PATTERNS-3 SLIDE -----------------------%
+
 
 
 %------------------------- 16. ESCAPE ANALYSIS SLIDE -----------------------%
