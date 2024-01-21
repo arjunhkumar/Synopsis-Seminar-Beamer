@@ -1,0 +1,4 @@
+  0: aload_1
+  1: getfield      #7 
+  4: getfield      #13 
+  7: istore_3
