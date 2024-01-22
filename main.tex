@@ -635,9 +635,9 @@
   \end{varblock}
   \end{columns}
 \end{frame}
-%------------------------- 17. CACHE COHERENCE SLIDE -----------------------%
+%------------------------- 17. REAL-WORLD EXAMPLE SLIDE -----------------------%
 
-%------------------------- 17. Challenges -----------------------%
+%------------------------- 17. CHALLENGES AND ROAD AHEAD -----------------------%
 \begin{frame}{Challenges and Road Ahead}
   \begin{block}{Challenges}
     \begin{itemize}
@@ -653,7 +653,8 @@
     \end{itemize}
   \end{block}
 \end{frame}
-%------------------------- 17. CACHE COHERENCE SLIDE -----------------------%
+%------------------------- 17. CHALLENGES AND ROAD AHEAD -----------------------%
+%------------------------- 17. SUMMARY -----------------------%
 
 \begin{frame}{Summary}
     \begin{itemize}
@@ -668,6 +669,8 @@
     \citep{PYE2019} \citep{JEPP} \citep{JEPD} \citep{OpenJ9} \citep{JP}
     }
 \end{frame}
+%------------------------- 17. SUMMARY -----------------------%
+%------------------------- 17. PUBLICATIONS -----------------------%
 
 \begin{frame}{Publications}
   \begin{enumerate}
@@ -678,6 +681,94 @@
     (under review in the European Conference on Object-Oriented Programming (ECOOP), 2024)   
   \end{enumerate} 
 \end{frame}
+%------------------------- 17. PUBLICATIONS -----------------------%
+%------------------------- 17. THESIS-ORGANIZATION -----------------------%
+
+\begin{frame}{Thesis Organization}
+  Thesis structure consists of the following six chapters:
+  \begin{enumerate}
+  \item \textbf{Introduction}.
+  \item \textbf{Object Inlining}.
+  \item \textbf{Analysis of Current Inlining Strategy}.
+  \item \textbf{Hybrid Selective Inlining Strategy}.
+  \item \textbf{Related Work}.
+  \item \textbf{Conclusion and Future Work}.
+  \end{enumerate}
+\end{frame}
+%------------------------- 17. THESIS-ORGANIZATION -----------------------%
+
+%------------------------- 17. THESIS-ORGANIZATION-INTRODUCTION -----------------------%
+
+\begin{frame}{Thesis Organiztion}
+  \begin{block}{Introduction}
+    \small
+    This chapter briefly describes about:
+    \begin{itemize}
+    \item Object Oriented Languages and JIT Compilers
+    \item Various design choices and current implementation of specific languages features used later in
+    the thesis. 
+    \item Overall JIT compilation process by using a industry standard JIT compiler as a usecase.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Object Inlining}
+    \small
+    This chapter describes about:
+    \begin{itemize}
+      \item Object Inlining optimization in depth. 
+      \item Constraints imposed by modern programming languages for enabling object inlining.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%------------------------- 17. THESIS-ORGANIZATION-INTRODUCTION -----------------------%
+
+%------------------------- 17. THESIS-ORGANIZATION-Analysis of Current Inlining Strategy -----------------------%
+\begin{frame}{Thesis Organiztion}
+  \begin{block}{Analysis of Current Inlining Strategy}
+    This chapter describes about:
+    \begin{itemize}
+      \item Current implementation strategy used for object inlining and dicusses
+      its shortcomings and drawbacks in details.
+      \item Experimentation along with the broad results performed on a
+      prototype version of object inlining enabled JIT compiler for Java.
+      \begin{itemize}
+        \item Field-access patterns.
+        \item Correlation with Escape Analysis.
+        \item Correlation with Cache.
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+%------------------------- 17. THESIS-ORGANIZATION-Analysis of Current Inlining Strategy -----------------------%
+
+%------------------------- 17. THESIS-ORGANIZATION-Hyrbrid Selective Inlining Strategy -----------------------%
+\begin{frame}{Thesis Organiztion}
+  \begin{block}{Hyrbrid Selective Inlining Strategy}
+    This chapter describes about the novel inlining strategy ``ValFinder'' and the various stages in it:
+    \begin{itemize}
+      \item Various static analyses performed.
+      \item Design and implementation of the runtime profiler.
+      \item Selective inlining strategy inside the JVM.
+    \end{itemize}
+  \end{block}
+\end{frame}
+%------------------------- 17. THESIS-ORGANIZATION-Hyrbrid Selective Inlining Strategy -----------------------%
+
+%------------------------- 17. THESIS-ORGANIZATION-Hyrbrid Selective Inlining Strategy -----------------------%
+\begin{frame}{Thesis Organiztion}
+  \begin{block}{Related Work}
+    This chapter describes about the how other researchers have explored object inlining as well as
+    immutability related optimizations in various programming paradigms.
+  \end{block}
+  \begin{block}{Conclusion}
+    This chapter describes briefly describes the work and indicates intresting future directions along with
+    various applications of the work.
+  \end{block}
+\end{frame}
+%------------------------- 17. THESIS-ORGANIZATION-Hyrbrid Selective Inlining Strategy -----------------------%
+
+
+
 
 \begin{frame}
   \Huge{\centerline{\textbf{Questions}}}
