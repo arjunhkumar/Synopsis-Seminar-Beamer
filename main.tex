@@ -532,7 +532,7 @@
         % \small
         \item Field-Access Analysis
         % :  Identify potential local variables that could store
-        references to inlined fields.
+        % references to inlined fields.
         \item Method-Summary Construction
         % : Generates a summary of methods that take in container objects as arguments.
         \item Escape Analysis
@@ -612,6 +612,7 @@
 
 %------------------------- 17. REAL-WORLD EXAMPLE SLIDE -----------------------%
 \begin{frame}{Real-World Example}
+  % SEL - Selective Inlining Scheme NON - Inlining Disabled Scheme ALL - Complete Inlining Scheme
   \begin{columns}[c] 
     \column{.5\textwidth} 
   \begin{center}
@@ -629,8 +630,8 @@
       \item \small ET: Execution time 
       \item \small C: CPU Cycles
       \item \small I: Instructions executed
-      \item \small L11: L1D Cache Loads
-      \item \small L12: L1D Cache Miss Rate
+      \item \small L1L: L1D Cache Loads
+      \item \small L1M: L1D Cache Miss Rate
     \end{itemize}
   \end{varblock}
   \end{columns}
@@ -659,8 +660,7 @@
 \begin{frame}{Summary}
     \begin{itemize}
     \item Analyzed the current state of object-inlining optimization in Java.
-    \item Identified various \textbf{access patterns} under which fields should be inlined in their
-    respective containers.
+    \item Identified various \textbf{access patterns} under which inlined fields affect the application performance.
     \item Built an appropriate \textbf{inlining strategy} using a static + JIT analysis technique.
     \item Developed a novel \textbf{selective} inlining scheme for the Eclipse OpenJ9 VM.
     % \item Developed a source to source transformation tool for identification of inlineable fields.
@@ -704,7 +704,7 @@
     \small
     This chapter briefly describes about:
     \begin{itemize}
-    \item Object Oriented Languages and JIT Compilers
+    \item Object Oriented Languages and JIT Compilers.
     \item Various design choices and current implementation of specific languages features used later in
     the thesis. 
     \item Overall JIT compilation process by using a industry standard JIT compiler as a usecase.
@@ -727,8 +727,8 @@
   \begin{block}{Analysis of Current Inlining Strategy}
     This chapter describes about:
     \begin{itemize}
-      \item Current implementation strategy used for object inlining and dicusses
-      its shortcomings and drawbacks in details.
+      \item Current implementation strategy used for object inlining and discusses
+      its shortcomings in details.
       \item Experimentation along with the broad results performed on a
       prototype version of object inlining enabled JIT compiler for Java.
       \begin{itemize}
